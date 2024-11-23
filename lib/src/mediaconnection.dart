@@ -89,7 +89,7 @@ class MediaConnection extends BaseConnection {
     }
   }
 
-  void answer(MediaStream stream, {AnswerOption? callOptions}) {
+  void answer({MediaStream? stream, AnswerOption? callOptions}) {
     if (_localStream != null) {
       logger.warn(
         "Local stream already exists on this MediaConnection. Are you answering a call twice?",
